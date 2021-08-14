@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Class Name="DataLayer.Class1" Collapsed="true">
+    <Position X="0.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Class1.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataLayer.DataConnection">
+    <Position X="0.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABIABAAAECCIAEAMAAAAAAAAAIQAAAYACAAAA=</HashCode>
+      <FileName>DataConnection.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataLayer.TableDataGateways.ArtefaktGW">
+    <Position X="6" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAIQAAAAAAAAAE=</HashCode>
+      <FileName>TableDataGateways\ArtefaktGW.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataLayer.TableDataGateways.NavstevaGW">
+    <Position X="4.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAABAAAAAAAAIAAAQAAAAACAAAIQAAAAAAAAAA=</HashCode>
+      <FileName>TableDataGateways\NavstevaGW.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataLayer.TableDataGateways.PruvodceGW">
+    <Position X="4.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAAAAIAAAAAAAAAAAAAIQAAAAAAAAAA=</HashCode>
+      <FileName>TableDataGateways\PruvodceGW.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataLayer.TableDataGateways.RezervaceGW">
+    <Position X="6" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAAAAAAAAIAAAAAAAAAAAAAIQAAAAAAAAAE=</HashCode>
+      <FileName>TableDataGateways\RezervaceGW.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataLayer.TableDataGateways.VystavaGW">
+    <Position X="2.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgIAAAAAAAAAAAIACAAAAAAAAAAAIQAAAAAAAAAA=</HashCode>
+      <FileName>TableDataGateways\VystavaGW.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataLayer.TableDataGateways.ZakaznikGW">
+    <Position X="2.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAACAAAAAAAAAAEBAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>TableDataGateways\ZakaznikGW.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
