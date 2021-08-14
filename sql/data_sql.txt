@@ -1,0 +1,30 @@
+-- Naplneni dat
+
+-- Pruvodce
+INSERT INTO pruvodce (jmeno, prijmeni, email, mobilni_cislo, dostupnost, interni)
+VALUES ('Jan', 'Sochor', 'jan.sochor@seznam.cz', '608482568', 1, 0);
+
+INSERT INTO pruvodce (jmeno, prijmeni, email, mobilni_cislo, dostupnost, interni)
+VALUES ('Dan', 'Kadlon', 'dan.kadlon@seznam.cz', '608482002', 0, 1);
+
+
+-- Rezervace
+INSERT INTO rezervace (jmeno, prijmeni, email, pocet_osob, datum_a_cas)
+VALUES ('Ondrej', 'Halon', 'ondrej.halon@seznam.cz', 2, '20200618 10:00:00');
+
+INSERT INTO rezervace (jmeno, prijmeni, email, pocet_osob, datum_a_cas)
+VALUES ('Antonia', 'Bellaklez', 'antonia.belaklez@seznam.cz', 4, '20200619 12:30:00');
+
+-- Navsteva
+INSERT INTO navsteva(pocet_osob, datum, ma_rezervaci)
+VALUES (4, '20200618 10:00:00', 0);
+
+-- artefakt
+INSERT INTO artefakt (nazev, datum_nalezeni, stari, zeme_nalezu, je_vypujcen, datum_navraceni)
+VALUES ('Okované vědro', '20111105 16:00:00', 3000, 'čr', 0, null);
+
+INSERT INTO artefakt (nazev, datum_nalezeni, stari, zeme_nalezu, je_vypujcen, datum_navraceni)
+VALUES ('Doklady kovolitectví', '20080601 10:00:00', 1000, 'čr', 0, null);
+
+INSERT INTO artefakt (nazev, datum_nalezeni, stari, zeme_nalezu, je_vypujcen, datum_navraceni)
+VALUES ('Parohová podložka', '20101105 13:00:00', 2000, 'čr', 1, '20201024 10:00:00');

@@ -1,0 +1,166 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Class Name="BusinessLayer.BO.Archeolog" BaseTypeListCollapsed="true">
+    <Position X="10" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAABACAIAAAABAAAABAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BO\Archeolog.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Typ" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="BusinessLayer.BO.Artefakt">
+    <Position X="3.5" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAAAAAAIAAAAAAAAAACAAAAAEQAAAEAAAAAE=</HashCode>
+      <FileName>BO\Artefakt.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BusinessLayer.BO.ExterniPruvodce" BaseTypeListCollapsed="true">
+    <Position X="13.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIABBAABACAIAAAgAgAAABAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BO\ExterniPruvodce.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Typ" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="BusinessLayer.BO.InterniPruvodce" BaseTypeListCollapsed="true">
+    <Position X="12" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIABAAABACAIAAAgAgAAABAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BO\InterniPruvodce.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Typ" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="BusinessLayer.BO.Navsteva">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAEAAAAAAAAAAQAAAAACAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BO\Navsteva.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BusinessLayer.BO.Recepce" BaseTypeListCollapsed="true">
+    <Position X="7.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAABACAIAAABAAAAABAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BO\Recepce.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Field Name="rezervace" />
+    </ShowAsCollectionAssociation>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="BusinessLayer.BO.Rezervace">
+    <Position X="8.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACABAAAAACAAAAAAAAAAARAAABACAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BO\Rezervace.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BusinessLayer.BO.Vystava">
+    <Position X="6" Y="7.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEAAAAAAEAAAAAAAAAQAIBAAAAAQAIAAgAAE=</HashCode>
+      <FileName>BO\Vystava.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="artefakt" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="BusinessLayer.BO.Zakaznik">
+    <Position X="8.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAACAAAAABAAAAABAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BO\Zakaznik.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Field Name="rezervace" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="BusinessLayer.Class1" Collapsed="true">
+    <Position X="11.5" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Class1.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BusinessLayer.Controllers.SpravaArtefaktu">
+    <Position X="3.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAAABAAAAIAAAAAAAAAAAAAISAAAAAAAAAA=</HashCode>
+      <FileName>Controllers\SpravaArtefaktu.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Field Name="m_Artefakty" />
+      <Property Name="Artefakty" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="BusinessLayer.Controllers.SpravaEvidenci">
+    <Position X="6" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAABCAAIAAAAAIAAAIAAAAACAAAIQAAAAAAAAAA=</HashCode>
+      <FileName>Controllers\SpravaEvidenci.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Field Name="m_Navsteva" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="BusinessLayer.Controllers.SpravaRezervaci">
+    <Position X="11.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAIQACAAAAAAAAABIQAAAAAIAAAA=</HashCode>
+      <FileName>Controllers\SpravaRezervaci.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Field Name="m_Rezervace" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="BusinessLayer.Controllers.SpravaVystavy">
+    <Position X="13.75" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAgAAEQAIACAAAAIACAAAAIQAAAAAAYAAA=</HashCode>
+      <FileName>Controllers\SpravaVystavy.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BusinessLayer.Controllers.SpravaZamestnancu">
+    <Position X="0.5" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAACAAgAAAAIAAAAAgAAAAAAAIQAAAAAAABAA=</HashCode>
+      <FileName>Controllers\SpravaZamestnancu.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Zamestnanci" />
+      <Property Name="Pruvodce" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Interface Name="BusinessLayer.BO.IPruvodce" Collapsed="true">
+    <Position X="0.5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAgAgAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BO\IPruvodce.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="BusinessLayer.BO.IZamestnanec" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAABACAIAAAAAAAAABAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BO\IZamestnanec.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="BusinessLayer.BO.TypPrihlaseni">
+    <Position X="11.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>BO\IZamestnanec.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

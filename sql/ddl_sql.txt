@@ -1,0 +1,80 @@
+-- drop tables
+DROP TABLE navsteva
+DROP TABLE artefakt
+DROP TABLE pruvodce
+DROP TABLE rezervace
+
+CREATE TABLE artefakt (
+    aid               INTEGER IDENTITY(1,1) NOT NULL,
+    nazev             varchar(100),
+    datum_nalezeni    datetime,
+    stari             INTEGER,
+    zeme_nalezu       varchar(100),
+    je_vypujcen       bit,
+    datum_navraceni   datetime
+)
+
+go
+
+ALTER TABLE Artefakt ADD constraint artefakt_pk PRIMARY KEY CLUSTERED (aID)
+     WITH (
+     ALLOW_PAGE_LOCKS = ON , 
+     ALLOW_ROW_LOCKS = ON ) 
+go
+
+CREATE TABLE navsteva (
+    nid            INTEGER IDENTITY(1,1) NOT NULL,
+    pocet_osob     INTEGER,
+    datum          datetime,
+    rezervace_rid   INTEGER NULL
+)
+go
+
+ALTER TABLE Navsteva ADD constraint navsteva_pk PRIMARY KEY CLUSTERED (nID)
+     WITH (
+     ALLOW_PAGE_LOCKS = ON , 
+     ALLOW_ROW_LOCKS = ON ) 
+go
+
+CREATE TABLE pruvodce (
+    pid             INTEGER IDENTITY(1,1) NOT NULL,
+    jmeno           varchar(100),
+    prijmeni        varchar(100),
+    email           varchar(100),
+    mobilni_cislo   varchar(100),
+    dostupnost      bit,
+    interni         bit
+)
+
+go
+
+ALTER TABLE Pruvodce ADD constraint pruvodce_pk PRIMARY KEY CLUSTERED (pID)
+     WITH (
+     ALLOW_PAGE_LOCKS = ON , 
+     ALLOW_ROW_LOCKS = ON ) 
+go
+
+CREATE TABLE rezervace (
+    rid           INTEGER IDENTITY(1,1) NOT NULL,
+    jmeno         varchar(100),
+    prijmeni      varchar(100),
+    email         varchar(100),
+    pocet_osob    INTEGER,
+    datum_a_cas   datetime
+)
+
+go
+
+ALTER TABLE Rezervace ADD constraint rezervace_pk PRIMARY KEY CLUSTERED (rID)
+     WITH (
+     ALLOW_PAGE_LOCKS = ON , 
+     ALLOW_ROW_LOCKS = ON ) 
+go
+
+
+ALTER TABLE Navsteva
+    ADD CONSTRAINT navsteva_rezervace_fk FOREIGN KEY ( rezervace_rid )
+        REFERENCES rezervace ( rid )
+ON DELETE NO ACTION 
+    ON UPDATE no action
+go

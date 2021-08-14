@@ -1,0 +1,13 @@
+select * from navsteva
+left join rezervace on rezervace.rid = rezervace_rid
+
+
+--SQL dotaz pro testovani alternativniho prubehu
+              UPDATE pruvodce
+              SET dostupnost = 0
+              WHERE pid = 2;
+
+              UPDATE pruvodce
+              SET dostupnost = 0
+              WHERE pid = 1;
+              select * from pruvodce
