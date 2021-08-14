@@ -1,0 +1,104 @@
+﻿<Window x:Class="WpfDesktop.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfDesktop"
+        mc:Ignorable="d"
+        Title="Muzeum" Height="450" Width="800">
+    <Grid>
+        <Canvas x:Name="MainCanvas">
+            <Canvas x:Name="Canvas_infoOPrihlaseni" Height="64" Width="138" Canvas.Left="644" Canvas.Top="82">
+                <TextBlock x:Name="prihlasenaRole_text" Canvas.Left="10" TextWrapping="Wrap" Text="Role" Height="17" Width="122" Canvas.Top="10" FontWeight="Bold"/>
+                <TextBlock x:Name="jmeniPrihlaseni_text" TextWrapping="Wrap" Canvas.Top="27" Width="122" Height="17" Canvas.Left="10"><Run Text="Jm"/><Run Text="éno"/></TextBlock>
+                <TextBlock x:Name="prijmeniPrihlaseni_text" Canvas.Left="10" TextWrapping="Wrap" Canvas.Top="44" Height="18" Width="122"><Run Text="Příjmen"/><Run Text="í"/></TextBlock>
+            </Canvas>
+            <Grid x:Name="Grid_museum_system" Height="52" Width="792" Canvas.Top="10" Background="Black">
+                <TextBlock x:Name="MuseumSystemOKL_text" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Museum System" VerticalAlignment="Top" Height="42" Width="745" Margin="37,10,0,0" Foreground="White" FontSize="24" FontWeight="Bold"/>
+            </Grid>
+        </Canvas>
+        <Canvas x:Name="LoginCanvas" HorizontalAlignment="Left" Height="419" VerticalAlignment="Top" Width="792" d:IsHidden="True">
+            <TextBlock x:Name="nadpis_prihlaseniUzivatele_textBlock" Canvas.Left="270" TextWrapping="Wrap" Text="Přihlásit se" Canvas.Top="164" Width="231" Height="28" FontWeight="Bold" FontSize="18" TextAlignment="Center"/>
+            <TextBlock x:Name="heslo_textBlock" Canvas.Left="270" TextWrapping="Wrap" Text="Heslo:" Canvas.Top="268" Visibility="Hidden"/>
+            <PasswordBox x:Name="heslo_textBox" Height="16" Canvas.Left="326" PasswordChar="*" Canvas.Top="268" Width="120" Visibility="Hidden"/>
+            <TextBlock x:Name="vyberUzivatele_textBlock" Canvas.Left="270" TextWrapping="Wrap" Text="Uživatel:" Canvas.Top="241"/>
+            <ComboBox x:Name="comboBox_userLogin" Canvas.Left="326" Canvas.Top="241" Width="120" SelectionChanged="comboBox_SelectionChanged">
+                <ComboBoxItem Content="Recepce"/>
+                <ComboBoxItem Content="Archeolog"/>
+            </ComboBox>
+            <Button x:Name="prihlasitSe_button" Content="Přihlásit se" Canvas.Left="338" Canvas.Top="319" Width="97" Background="Black" Foreground="White" Height="27" Click="prihlasitSe_button_Click"/>
+        </Canvas>
+        <Canvas x:Name="RecepceCanvas" d:IsHidden="True">
+            <Canvas x:Name="Canvas_zaevidovat_navstevu" Height="293" Width="407" Canvas.Left="212" Canvas.Top="96">
+                <TextBlock x:Name="EvidenceNasvstev_textBlock" Canvas.Left="10" TextWrapping="Wrap" Text="Evidence návštěv" Canvas.Top="30" Height="35" Width="387" FontWeight="Bold" FontSize="20" HorizontalAlignment="Left" TextAlignment="Center"/>
+                <TextBlock x:Name="ZaevidovatNavstevu_textBlock" TextWrapping="Wrap" Text="Zaevidovat návštěvu" Canvas.Left="133" Canvas.Top="131" Width="144" FontSize="14"/>
+                <Button x:Name="bezRezervace_button" Content="Bez rezervace" Canvas.Left="89" Canvas.Top="172" Width="91" Background="Black" Foreground="White" Height="29" Click="bezRezervace_button_Click"/>
+                <Button x:Name="sRezervaci_button" Content="S rezervací" Canvas.Left="219" Canvas.Top="172" Width="91" Background="Black" Foreground="White" Height="29" Click="sRezervaci_button_Click"/>
+                <TextBlock x:Name="chybove_hlaseni_evicence_s_rez_text" TextWrapping="Wrap" Canvas.Left="89" Canvas.Top="81" Width="248" Foreground="#FFA40000"/>
+                <Canvas x:Name="bezRezervace_canvas" Height="228" Width="407" Background="White" Canvas.Top="65" d:IsHidden="True">
+                    <TextBlock x:Name="EvidenceNasvstevBezRezervace_textBlock" Canvas.Left="10" TextWrapping="Wrap" Text="Bez rezervace" Height="33" Width="387" FontWeight="Bold" FontSize="16" HorizontalAlignment="Left" TextAlignment="Center"/>
+                    <TextBlock x:Name="pocet_navstev_text" TextWrapping="Wrap" Text="Počet osob:" Canvas.Left="83" Canvas.Top="97" Width="67"/>
+                    <TextBox x:Name="pocetOsob_textbox" Height="17" TextWrapping="Wrap" Width="77" Canvas.Left="159" Canvas.Top="97"/>
+                    <Button x:Name="bezRezervace_zaevidovat_button" Content="Zaevidovat" Canvas.Left="154" Canvas.Top="156" Width="91" Background="Black" Foreground="White" Height="29" Click="bezRezervace_zaevidovat_button_Click"/>
+                    <TextBlock x:Name="info_o_zaevidovani_text" TextWrapping="Wrap" Canvas.Left="59" Canvas.Top="38" Width="301" Height="27"/>
+                </Canvas>
+                <Canvas x:Name="sRezervaci_canvas" Height="228" Width="407" Background="White" Canvas.Top="65" d:IsHidden="True">
+                    <TextBlock x:Name="EvidenceNasvstevSRezervaci_textBlock1" Canvas.Left="10" TextWrapping="Wrap" Text="S rezervací" Height="33" Width="387" FontWeight="Bold" FontSize="16" HorizontalAlignment="Left" TextAlignment="Center"/>
+                    <TextBlock x:Name="pocet_navstev_text2" TextWrapping="Wrap" Text="Počet osob:" Canvas.Left="44" Canvas.Top="47" Width="67"/>
+                    <TextBox x:Name="pocetOsob_s_rezervaci_textbox" Height="17" TextWrapping="Wrap" Width="77" Canvas.Left="116" Canvas.Top="47"/>
+                    <Button x:Name="sRezervaci_vybrat_rezervaci_button" Content="Vybrat" Canvas.Left="154" Canvas.Top="190" Width="91" Background="Black" Foreground="White" Height="29" Click="sRezervaci_zaevidovat_button_Click"/>
+                    <TextBlock x:Name="email_test_text" TextWrapping="Wrap" Text="Email:" Canvas.Left="220" Canvas.Top="48" Width="37"/>
+                    <TextBox x:Name="email_k_otestovani_textbox" Height="17" TextWrapping="Wrap" Width="114" Canvas.Left="262" Canvas.Top="47"/>
+                    <DataGrid x:Name="rezervace_dataGrid" Height="94" Canvas.Left="44" Canvas.Top="76" Width="332" AutoGenerateColumns="False" SelectionMode="Single">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="ID" Binding="{Binding Path=rID}" IsReadOnly="True"/>
+                            <DataGridTextColumn Header="Jméno" Binding="{Binding Path=Jmeno}" IsReadOnly="True"/>
+                            <DataGridTextColumn Header="Příjmení" Binding="{Binding Path=Prijmeni}" IsReadOnly="True"/>
+                            <DataGridTextColumn Header="Počet osob" Binding="{Binding Path=PocetOsob}" IsReadOnly="True"/>
+                            <DataGridTextColumn Header="Datum" Binding="{Binding Path=Datum}" IsReadOnly="True"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </Canvas>
+            </Canvas>
+            <Button x:Name="zaevidovat_button_Copy" Content="Zaevidovat návštěvu" Canvas.Left="31" Canvas.Top="164" Width="132" Background="Black" Foreground="White" Height="43" Click="zaevidovat_button_Copy_Click"/>
+            <Button x:Name="rezervace_button" Content="Rezervace" Canvas.Left="31" Canvas.Top="212" Width="132" Background="Black" Foreground="White" Height="43"/>
+            <Button x:Name="odhlasitSe_button" Content="Odhlásit se" Canvas.Left="31" Canvas.Top="346" Width="132" Background="Black" Foreground="White" Height="43" Click="odhlasitSe_button_Click"/>
+        </Canvas>
+        <Canvas x:Name="ArcheologCanvas">
+            <Button x:Name="evidenceArtefaktu_button" Content="Evidence artefaktů" Canvas.Left="31" Canvas.Top="145" Width="132" Background="Black" Foreground="White" Height="43"/>
+            <Button x:Name="vystava_button" Content="Vytvořit výstavu" Canvas.Left="31" Canvas.Top="193" Width="132" Background="Black" Foreground="White" Height="43" Click="vystava_button_Click"/>
+            <Button x:Name="odhlasitSe_button2" Canvas.Left="31" Canvas.Top="346" Width="132" Background="Black" Foreground="White" Height="43" Click="odhlasitSe_button2_Click" Content="Odhlásit se"/>
+            <Canvas x:Name="vytvoreni_vystavy_canvas" Height="316" Width="590" Canvas.Left="182" Canvas.Top="83" d:IsHidden="True">
+                <Button x:Name="ulozit_vystavu_button" Content="Uložit výstavu" Canvas.Left="116" Canvas.Top="277" Width="91" Background="Black" Foreground="White" Height="29" Click="ulozit_vystavu_button_Click"/>
+                <TextBlock x:Name="vytvorit_vystavu_textBlock" Canvas.Left="10" TextWrapping="Wrap" Text="Vytvořit novou výstavu" Canvas.Top="30" Height="35" Width="387" FontWeight="Bold" FontSize="20" HorizontalAlignment="Left" TextAlignment="Center"/>
+                <Button x:Name="pridat_artefakt_button" Content="Přidat" Canvas.Left="409" Canvas.Top="258" Width="91" Background="Black" Foreground="White" Height="29" Click="pridat_artefakt_button_Click"/>
+                <DataGrid x:Name="pridane_artefakty_dataGrid" Height="100" Canvas.Top="156" Width="279" IsReadOnly="True" SelectionMode="Single"/>
+                <DataGrid x:Name="artefakty_k_pridani_dataGrid" Height="100" Canvas.Left="293" Canvas.Top="142" Width="297" IsReadOnly="True" SelectionMode="Single"/>
+                <TextBlock x:Name="prirazene_artefakty_textBlock" Canvas.Left="82" TextWrapping="Wrap" Text="Přiřazené artefakty" Canvas.Top="135" Width="125"/>
+                <TextBlock x:Name="vyberte_artefakt_k_prirazeni_textBlock" Canvas.Left="370" TextWrapping="Wrap" Canvas.Top="121" Width="153" Height="21"><Run Text="Vyberte artefakt k přiřazení"/><LineBreak/><Run/></TextBlock>
+                <TextBlock x:Name="nazev_vystavy_textBlock" Canvas.Left="43" TextWrapping="Wrap" Canvas.Top="70" Width="83" Height="18" Text="Název výstavy:&#xD;&#xA;"/>
+                <TextBlock x:Name="zacatek_vystavy_textBlock" Canvas.Left="73" TextWrapping="Wrap" Canvas.Top="95" Width="53" Height="18" Text="Začátek:"/>
+                <TextBlock x:Name="konec_vystavy_textBlock" Canvas.Left="242" TextWrapping="Wrap" Canvas.Top="95" Width="46" Height="18" Text="Konec:"/>
+                <TextBox x:Name="zacatek_textBox" Height="22" Canvas.Left="126" TextWrapping="Wrap" Canvas.Top="95" Width="81" ToolTip="YYYY-MM-DD" TextChanged="zacatek_textBox_TextChanged"/>
+                <TextBox x:Name="konec_textBox" Height="23" Canvas.Left="293" TextWrapping="Wrap" Canvas.Top="94" Width="115" ToolTip="YYYY-MM-DD" TextChanged="konec_textBox_TextChanged"/>
+                <TextBlock x:Name="artefakt_nemohl_byt_pridan_textBlock" Canvas.Left="228" TextWrapping="Wrap" Canvas.Top="293" Width="169" Foreground="#FFA00D0D"/>
+                <TextBox x:Name="nazevVystavy_textBox" Height="22" Canvas.Left="126" TextWrapping="Wrap" Canvas.Top="70" Width="81" ToolTip="YYYY-MM-DD" TextChanged="zacatek_textBox_TextChanged"/>
+            </Canvas>
+            <Button x:Name="seznamVystav_button" Content="Výstavy" Canvas.Left="31" Canvas.Top="241" Width="132" Background="Black" Foreground="White" Height="43" Click="seznamVystav_button_Click"/>
+            <Canvas x:Name="seznamVystav_canvas" Height="316" Width="590" Canvas.Left="182" Canvas.Top="83">
+                <TextBlock x:Name="seznamVystav_textBlock" Canvas.Left="10" TextWrapping="Wrap" Text="Výstavy" Canvas.Top="30" Height="35" Width="387" FontWeight="Bold" FontSize="20" HorizontalAlignment="Left" TextAlignment="Center"/>
+                <Button x:Name="smazat_vystavu_button" Content="Smazat výstavu" Canvas.Left="176" Canvas.Top="259" Width="91" Background="Black" Foreground="White" Height="29" Click="smazat_vystavu_button_Click"/>
+                <DataGrid x:Name="vystavy_dataGrid" Height="100" Canvas.Left="30" Canvas.Top="142" Width="511" IsReadOnly="True" SelectionMode="Single" AutoGenerateColumns="False">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Název" Binding="{Binding Path=nazev}" IsReadOnly="True"/>
+                        <DataGridTextColumn Header="Od data" Binding="{Binding Path=odData}" IsReadOnly="True"/>
+                        <DataGridTextColumn Header="Do data" Binding="{Binding Path=doData}" IsReadOnly="True"/>
+                        <DataGridTextColumn Header="Počet" Binding="{Binding Path=pocetArtefaktu}" IsReadOnly="True"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+                <TextBlock x:Name="artefakt_nemohl_byt_pridan_textBlock1" Canvas.Left="228" TextWrapping="Wrap" Canvas.Top="293" Width="169" Foreground="#FFA00D0D"/>
+            </Canvas>
+        </Canvas>
+
+    </Grid>
+</Window>
